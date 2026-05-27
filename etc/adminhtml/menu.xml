@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+        <add id="Eckohaus_IpLedger::root" title="Eckohaus Admin" module="Eckohaus_IpLedger" sortOrder="10" resource="Eckohaus_IpLedger::root"/>
+        <add id="Eckohaus_IpLedger::ledger" title="IP Ledger (USCO)" module="Eckohaus_IpLedger" sortOrder="10" parent="Eckohaus_IpLedger::root" action="ip_ledger/ledger/index" resource="Eckohaus_IpLedger::ledger"/>
+    </menu>
+</config>
