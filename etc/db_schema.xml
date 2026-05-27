@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Setup/Declaration/Schema/etc/schema.xsd">
+    <table name="eckohaus_ip_ledger" resource="default" engine="innodb" comment="IP and Copyright Registration Ledger">
+        <column xsi:type="int" name="entity_id" unsigned="true" nullable="false" identity="true" comment="Entity ID"/>
+        <column xsi:type="varchar" name="case_number" nullable="false" length="255" comment="Case Number"/>
+        <column xsi:type="varchar" name="status" nullable="false" length="50" comment="Status"/>
+        <column xsi:type="date" name="date_opened" nullable="false" comment="Date Opened"/>
+        <column xsi:type="varchar" name="title_of_work" nullable="false" length="255" comment="Title of Work"/>
+        <column xsi:type="varchar" name="volume_num_issue" nullable="true" length="255" comment="Vol/Num/Issue"/>
+        <column xsi:type="varchar" name="month" nullable="true" length="20" comment="Month"/>
+        <column xsi:type="varchar" name="year" nullable="true" length="4" comment="Year"/>
+        <column xsi:type="varchar" name="type_of_work" nullable="false" length="100" comment="Type of Work"/>
+        <column xsi:type="varchar" name="appl_format" nullable="true" length="100" comment="Appl. Format"/>
+        <column xsi:type="varchar" name="appl_form" nullable="true" length="100" comment="Appl. Form"/>
+        <column xsi:type="decimal" name="fee_paid" scale="2" precision="10" nullable="true" comment="Fee Paid"/>
+        <column xsi:type="varchar" name="upload_status" nullable="true" length="50" comment="Upload Status"/>
+        <column xsi:type="date" name="date_closed" nullable="true" comment="Date Closed"/>
+        <column xsi:type="varchar" name="jurisdiction" nullable="false" length="50" default="USCO" comment="Jurisdiction"/>
+        
+        <constraint xsi:type="primary" referenceId="PRIMARY">
+            <column name="entity_id"/>
+        </constraint>
+    </table>
+</schema>
