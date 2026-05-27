@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<listing xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Ui:etc/ui_configuration.xsd">
+    <argument name="data" xsi:type="array">
+        <item name="js_config" xsi:type="array">
+            <item name="provider" xsi:type="string">eckohaus_ip_ledger_listing.eckohaus_ip_ledger_listing_data_source</item>
+            <item name="deps" xsi:type="string">eckohaus_ip_ledger_listing.eckohaus_ip_ledger_listing_data_source</item>
+        </item>
+        <item name="spinner" xsi:type="string">eckohaus_ip_ledger_columns</item>
+    </argument>
+    <dataSource name="eckohaus_ip_ledger_listing_data_source">
+        <argument name="dataProvider" xsi:type="configurableObject">
+            <argument name="class" xsi:type="string">Magento\Framework\View\Element\UiComponent\DataProvider\DataProvider</argument>
+            <argument name="name" xsi:type="string">eckohaus_ip_ledger_listing_data_source</argument>
+            <argument name="primaryFieldName" xsi:type="string">entity_id</argument>
+            <argument name="requestFieldName" xsi:type="string">id</argument>
+            <argument name="data" xsi:type="array">
+                <item name="config" xsi:type="array">
+                    <item name="update_url" xsi:type="url" path="mui/index/render"/>
+                    <item name="storageConfig" xsi:type="array">
+                        <item name="indexField" xsi:type="string">entity_id</item>
+                    </item>
+                </item>
+            </argument>
+        </argument>
+    </dataSource>
+    <columns name="eckohaus_ip_ledger_columns">
+        <column name="entity_id">
+            <settings>
+                <filter>textRange</filter>
+                <label translate="true">ID</label>
+                <sorting>asc</sorting>
+            </settings>
+        </column>
+        <column name="case_number">
+            <settings>
+                <filter>text</filter>
+                <label translate="true">Case Number</label>
+            </settings>
+        </column>
+        <column name="title_of_work">
+            <settings>
+                <filter>text</filter>
+                <label translate="true">Title of Work</label>
+            </settings>
+        </column>
+        <column name="jurisdiction">
+            <settings>
+                <filter>text</filter>
+                <label translate="true">Jurisdiction</label>
+            </settings>
+        </column>
+    </columns>
+</listing>
