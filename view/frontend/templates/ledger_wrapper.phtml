@@ -19,5 +19,26 @@
 </div>
 
 <div class="page-offset">
-    <?= $this->getLayout()->createBlock('Magento\Framework\View\Element\Template')->setTemplate('Magento_Catalog::product/ledger_view.phtml')->toHtml() ?>
+    <?php $cases = $block->getActiveCases(); ?>
+    
+    <div class="ledger-header" style="color: #4ade80; margin-bottom: 20px; font-family: monospace; font-size: 0.9em;">
+        + LIVE_QUEUE_ACTIVE <span style="float: right;">LEDGER_V.02 // <?= count($cases) ?>_ENTRIES</span>
+    </div>
+    <hr style="border-color: rgba(255,255,255,0.2); margin-bottom: 20px;">
+
+    <?php foreach ($cases as $case): ?>
+        <div class="ledger-entry" style="margin-bottom: 20px; font-family: monospace; display: flex; gap: 20px; letter-spacing: 0.05em;">
+            <div style="color: rgba(255,255,255,0.5); min-width: 180px; font-size: 0.85em;">
+                [ LEAD-<?= substr(md5($case['case_number']), 0, 8) ?> ]<br>
+                <?= $case['date'] ?>
+            </div>
+            <div style="flex-grow: 1; color: white;">
+                <?= $case['agency'] ?> : <?= $case['title'] ?> <br>
+                <span style="color: #4ade80; font-size: 0.85em;">
+                    STATUS: <?= $case['status'] ?> // CASE: <?= $case['case_number'] ?> // FORMAT: <?= strtoupper($case['format']) ?>
+                </span>
+            </div>
+        </div>
+        <hr style="border-color: rgba(255,255,255,0.1); margin-bottom: 20px;">
+    <?php endforeach; ?>
 </div>
