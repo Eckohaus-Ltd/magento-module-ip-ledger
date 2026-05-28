@@ -1,0 +1,23 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<div class="system-header">
+    <div class="system-status">ECKOHAUS_OS // V.01</div>
+    
+    <div class="nav-nodes">
+        <a href="<?= $block->escapeUrl($block->getUrl('archive')) ?>" class="nav-item">
+            <i class="fa-solid fa-database"></i> ARCHIVE
+        </a>
+
+        <a href="<?= $block->escapeUrl($block->getUrl('in-process')) ?>" class="nav-item">
+            <i class="fa-solid fa-spinner live-icon"></i> IN-PROCESS
+        </a>
+
+        <a href="<?= $block->escapeUrl($block->getUrl('archival-services')) ?>" class="nav-item">
+            <i class="fa-solid fa-briefcase"></i> AGENCY
+        </a>
+    </div>
+</div>
+
+<div class="page-offset">
+    <?= $this->getLayout()->createBlock('Magento\Framework\View\Element\Template')->setTemplate('Magento_Catalog::product/ledger_view.phtml')->toHtml() ?>
+</div>
