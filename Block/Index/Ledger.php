@@ -2,33 +2,41 @@
 namespace Eckohaus\IpLedger\Block\Index;
 
 use Magento\Framework\View\Element\Template;
+use Eckohaus\IpLedger\Model\ResourceModel\Ledger\CollectionFactory;
 
 class Ledger extends Template
 {
-    /**
-     * Staging Data Provider based on USCO eCO Portal
-     * To be replaced with Collection Factory once DB schema is finalized.
-     */
+    protected $collectionFactory;
+
+    public function __construct(
+        Template\Context $context,
+        CollectionFactory $collectionFactory,
+        array $data = []
+    ) {
+        $this->collectionFactory = $collectionFactory;
+        parent::__construct($context, $data);
+    }
+
     public function getActiveCases()
     {
-        return [
-            [
-                'case_number' => '1-15166255541',
-                'date' => '2026.05.22', // Formatted for OS aesthetic
-                'title' => 'AMRE FORTRAN CALCULATION MOTOR',
-                'status' => 'OPEN',
-                'agency' => 'USCO',
-                'format' => 'Literary Work'
-            ],
-            [
-                'case_number' => '1-15162396971',
-                'date' => '2026.05.13',
-                'title' => 'AMRE ARCADE TERMINAL: BASE EQUATION DATA STRUCTURE',
-                'status' => 'OPEN',
-                'agency' => 'USCO',
-                'format' => 'Literary Work'
-            ]
-        ];
+        $collection = $this->collectionFactory->create();
+        
+        // Optional: Filter to only show OPEN cases in the active queue
+        $collection->addFieldToFilter('status', 'Open');
+
+        $cases = [];
+        foreach ($collection as $item) {
+            // Mapping frontend expected keys to actual database columns
+            $cases[] = [
+                'case_number' => $item->getData('case_number'), 
+                'date'        => $item->getData('date_opened'),        
+                'title'       => $item->getData('title_of_work'),
+                'status'      => strtoupper($item->getData('status')),
+                'agency'      => $item->getData('jurisdiction'),
+                'format'      => $item->getData('type_of_work')
+            ];
+        }
+
+        return $cases;
     }
 }
-
