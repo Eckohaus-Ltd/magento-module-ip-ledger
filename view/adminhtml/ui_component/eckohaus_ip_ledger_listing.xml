@@ -22,6 +22,15 @@
         </dataProvider>
     </dataSource>
 
+    <listingToolbar name="listing_top">
+        <settings>
+            <sticky>true</sticky>
+        </settings>
+        <bookmark name="bookmarks"/>
+        <columnsControls name="columns_controls"/>
+        <filters name="listing_filters"/>
+        <paging name="listing_paging"/>
+    </listingToolbar>
     <columns name="eckohaus_ip_ledger_columns">
         <column name="entity_id">
             <settings>
