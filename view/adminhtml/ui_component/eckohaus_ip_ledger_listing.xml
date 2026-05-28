@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <listing xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Ui:etc/ui_configuration.xsd">
-    
     <argument name="data" xsi:type="array">
         <item name="js_config" xsi:type="array">
             <item name="provider" xsi:type="string">eckohaus_ip_ledger_listing.eckohaus_ip_ledger_listing_data_source</item>
@@ -8,6 +7,13 @@
     </argument>
 
     <settings>
+        <buttons>
+            <button name="add">
+                <url path="*/*/newAction"/>
+                <class>primary</class>
+                <label translate="true">Add New Case</label>
+            </button>
+        </buttons>
         <spinner>eckohaus_ip_ledger_columns</spinner>
         <deps>
             <dep>eckohaus_ip_ledger_listing.eckohaus_ip_ledger_listing_data_source</dep>
@@ -67,4 +73,3 @@
         </column>
     </columns>
 </listing>
-
