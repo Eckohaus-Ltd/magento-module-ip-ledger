@@ -1,5 +1,10 @@
 <?xml version="1.0"?>
 <page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <head>
+        <title>IN_PROCESS | Asset Processing &amp; Sanitization | ECKOHAUS</title>
+        <meta name="description" content="Real-time log of creative assets currently undergoing nomenclature assignment, sanitization, and administrative processing. This gate serves as the intermediary between raw production and the formal Eckohaus Archive."/>
+        <meta name="keywords" content="In-Process, Asset Sanitization, Creative-Admin, Intellectual Property Processing, Metadata Mapping, Nomenclature Assignment, Helium-Void-State, Active-Queues, Digital Artifacts, Archive-Transitional"/>
+    </head>
     <body>
         <referenceContainer name="content">
             <block class="Magento\Framework\View\Element\Template" name="ip.ledger.wrapper" template="Eckohaus_IpLedger::ledger_wrapper.phtml" />
@@ -12,4 +17,3 @@
         </referenceContainer>
     </body>
 </page>
-

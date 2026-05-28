@@ -17,7 +17,6 @@ class Index implements HttpGetActionInterface
     {
         $resultPage = $this->resultPageFactory->create();
         // This sets the browser tab and page title
-        $resultPage->getConfig()->getTitle()->set('USCO & DGIP Active Ledger');
         return $resultPage;
     }
 }
