@@ -6,8 +6,10 @@
         <meta name="keywords" content="In-Process, Asset Sanitization, Creative-Admin, Intellectual Property Processing, Metadata Mapping, Nomenclature Assignment, Helium-Void-State, Active-Queues, Digital Artifacts, Archive-Transitional"/>
     </head>
     <body>
+        <referenceBlock name="catalog.compare.sidebar" remove="true"/>
+        
         <referenceContainer name="content">
-            <block class="Eckohaus\IpLedger\Block\Index\Ledger" name="ip.ledger.wrapper" template="Eckohaus_IpLedger::ledger_wrapper.phtml" />            
+            <block class="Eckohaus\IpLedger\Block\Index\Ledger" name="ip.ledger.wrapper" template="Eckohaus_IpLedger::ledger_wrapper.phtml" />
             
             <block class="Magento\Cms\Block\Block" name="global_footer_eckohaus">
                 <arguments>
