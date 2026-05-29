@@ -25,6 +25,10 @@ class DataProvider extends AbstractDataProvider
         if (isset($this->loadedData)) {
             return $this->loadedData;
         }
+        
+        // THE FIX: Initialize as an empty array so Magento doesn't panic on a new entry
+        $this->loadedData = []; 
+        
         $items = $this->collection->getItems();
         foreach ($items as $item) {
             $this->loadedData[$item->getId()] = $item->getData();
