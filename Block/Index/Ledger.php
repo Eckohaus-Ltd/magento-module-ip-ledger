@@ -21,22 +21,26 @@ class Ledger extends Template
     {
         $collection = $this->collectionFactory->create();
         
-        // Optional: Filter to only show OPEN cases in the active queue
-        $collection->addFieldToFilter('status', 'Open');
+        // Push the newest cases to the top of the UI
+        $collection->setOrder('date_opened', 'DESC');
 
-        $cases = [];
+        // Note: I have disabled the "Open" filter for right now so we can test it safely. 
+        // Once we know it works, you can remove the '//' below to turn the filter back on!
+        // $collection->addFieldToFilter('status', 'Open');
+
+        $formattedCases = [];
+
         foreach ($collection as $item) {
-            // Mapping frontend expected keys to actual database columns
-            $cases[] = [
-                'case_number' => $item->getData('case_number'), 
-                'date'        => $item->getData('date_opened'),        
-                'title'       => $item->getData('title_of_work'),
-                'status'      => strtoupper($item->getData('status')),
-                'agency'      => $item->getData('jurisdiction'),
-                'format'      => $item->getData('type_of_work')
+            $formattedCases[] = [
+                'case_number' => $item->getData('case_number') ?? 'PENDING',
+                'date'        => $item->getData('date_opened') ?? 'N/A',
+                'agency'      => strtoupper($item->getData('jurisdiction') ?? 'USCO'), 
+                'title'       => $item->getData('title_of_work') ?? 'Untitled',
+                'status'      => strtoupper($item->getData('status') ?? 'Processing'),
+                'format'      => strtoupper($item->getData('type_of_work') ?? 'Digital Asset')
             ];
         }
 
-        return $cases;
+        return $formattedCases;
     }
 }
