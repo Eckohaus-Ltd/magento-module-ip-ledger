@@ -9,7 +9,7 @@
         <referenceBlock name="catalog.compare.sidebar" remove="true"/>
         
         <referenceContainer name="content">
-            <block class="Eckohaus\IpLedger\Block\Index\Ledger" name="ip.ledger.wrapper" template="Eckohaus_IpLedger::ledger_wrapper.phtml" />
+            <block class="Eckohaus\IpLedger\Block\Index\Ledger" name="ip.ledger.wrapper" template="Eckohaus_IpLedger::ledger_wrapper.phtml" cacheable="false" />
             
             <block class="Magento\Cms\Block\Block" name="global_footer_eckohaus">
                 <arguments>
