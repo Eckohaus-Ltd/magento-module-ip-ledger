@@ -29,8 +29,8 @@
     <?php foreach ($cases as $case): ?>
         <div class="ledger-entry" style="margin-bottom: 20px; font-family: monospace; display: flex; gap: 20px; letter-spacing: 0.05em;">
             <div style="color: rgba(255,255,255,0.5); min-width: 180px; font-size: 0.85em;">
-                [ LEAD-<?= substr(md5($case['case_number']), 0, 8) ?> ]<br>
-                <?= $case['date'] ?>
+                [ APP-<?= substr(md5($case['case_number']), 0, 8) ?> ]<br>
+                OPENED:<?= $case['date'] ?>
             </div>
             <div style="flex-grow: 1; color: white;">
                 <?= $case['agency'] ?> : <?= $case['title'] ?> <br>
