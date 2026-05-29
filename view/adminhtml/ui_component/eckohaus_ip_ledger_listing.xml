@@ -82,10 +82,10 @@
                 <label translate="true">Jurisdiction</label>
             </settings>
         </column>
-    </columns>
-    <actionsColumn name="actions" class="Eckohaus\IpLedger\Ui\Component\Listing\Column\LedgerActions">
+        <actionsColumn name="actions" class="Eckohaus\IpLedger\Ui\Component\Listing\Column\LedgerActions">
             <settings>
                 <indexField>entity_id</indexField>
             </settings>
         </actionsColumn>
+    </columns>
 </listing>
