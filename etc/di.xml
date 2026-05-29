@@ -1,6 +1,7 @@
 <?xml version="1.0"?>
 <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
-    <virtualType name="EckohausIpLedgerGridCollection" type="Magento\Framework\View\Element\UiComponent\DataProvider\SearchResult">
+    
+    <virtualType name="Eckohaus\IpLedger\Model\ResourceModel\Ledger\Grid\Collection" type="Magento\Framework\View\Element\UiComponent\DataProvider\SearchResult">
         <arguments>
             <argument name="mainTable" xsi:type="string">eckohaus_ip_ledger</argument>
             <argument name="resourceModel" xsi:type="string">Eckohaus\IpLedger\Model\ResourceModel\Ledger</argument>
@@ -10,8 +11,9 @@
     <type name="Magento\Framework\View\Element\UiComponent\DataProvider\CollectionFactory">
         <arguments>
             <argument name="collections" xsi:type="array">
-                <item name="eckohaus_ip_ledger_listing_data_source" xsi:type="string">EckohausIpLedgerGridCollection</item>
+                <item name="eckohaus_ip_ledger_listing_data_source" xsi:type="string">Eckohaus\IpLedger\Model\ResourceModel\Ledger\Grid\Collection</item>
             </argument>
         </arguments>
     </type>
+
 </config>
