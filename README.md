@@ -1,12 +1,23 @@
-# Magento Module: AMRE Arcade (Eckohaus Ltd) 
- 
-The primary consumer-facing frontend translation interface for the Eckohaus commercial matrix. This Magento 2 module integrates high-gain CGI Fortran calculations from the core Angular Momentum Reaction Engine (AMRE) into interactive WebGL/Three.js canvases (Kupu Terminal/Spatial) tailored for regional CDN delivery. 
- 
-## ?? Core Functionality 
-* **Visual Ledger:** Acts as an interactive schematic demonstrating the transcription of tributaries of light into matter, mapping Riccati-driven toroidal vectors to physical endpoints. 
-* **Frontend Integration:** Deploys targeted canvas environments mapped to distinct domains and compiled within dedicated `_extend.less` parameters. 
- 
-## ?? Licensing & Legal Status 
-This module is a closed-source, proprietary framework operating under the **Eckohaus Proprietary Software License**. 
- 
-> **Legal Notice:** The structural arrangement and architectural schema of this repository are currently under active application for formal software code registration with the **United States Copyright Office (USCO)**. Public visibility is maintained strictly for ecosystem transparency. Redistribution, replication, or unauthorized commercial deployment is expressly prohibited. Please refer to the `LICENSE` file for full parameters. 
+# Magento Module: IP Ledger (Eckohaus Ltd)
+
+A centralized Magento 2 administrative ledger designed specifically for tracking intellectual property, jurisdictional licensing, and copyright registrations within the Eckohaus commercial matrix. This module functions as an online ledger entry system for active processes within the ecosystem (e.g., USCO, DGIP) with Magento admin-side integration served through a frontend UI.
+
+## ⚙️ Core Functionality
+
+* **Administrative Integration:** Directly integrated into the Magento admin portal, providing a unified dashboard for managing transactional web data and commercial licensing vectors.[cite: 1]
+* **Jurisdictional Compliance:** Architected to manage and track active processes for intellectual property registrations, ensuring alignment with USCO and DGIP standards.[cite: 1]
+* **Frontend UI Ledger:** Serves as the public-facing interface for tracking active registrations, providing transparency for the Eckohaus ecosystem via [eckohaus.blog/in-process/](https://eckohaus.blog/in-process/).[cite: 1]
+
+# Magento Module: IP Ledger (Eckohaus Ltd)
+
+A centralized Magento 2 administrative ledger designed specifically for tracking intellectual property, jurisdictional licensing, and copyright registrations within the Eckohaus commercial matrix. This module functions as an online ledger entry system for active processes within the ecosystem (e.g., USCO, DGIP) with Magento admin-side integration served through a frontend UI.
+
+## ⚙️ Core Functionality
+
+* **Administrative Integration:** Directly integrated into the Magento admin portal, providing a unified dashboard for managing transactional web data and commercial licensing vectors.[cite: 1]
+* **Jurisdictional Compliance:** Architected to manage and track active processes for intellectual property registrations, ensuring alignment with USCO and DGIP standards.[cite: 1]
+* **Frontend UI Ledger:** Serves as the public-facing interface for tracking active registrations, providing transparency for the Eckohaus ecosystem via [eckohaus.blog/in-process/](https://eckohaus.blog/in-process/).[cite: 1]
+
+## 📜 Licensing & Legal Status
+
+This module is a closed-source, proprietary framework. Please refer to the `LICENSE` file located in the root of this repository for full deployment parameters and jurisdictional compliance details.
