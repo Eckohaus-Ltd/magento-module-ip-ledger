@@ -6,6 +6,8 @@
         <meta name="keywords" content="In-Process, Asset Sanitization, Creative-Admin, Intellectual Property Processing, Metadata Mapping, Nomenclature Assignment, Helium-Void-State, Active-Queues, Digital Artifacts, Archive-Transitional"/>
     </head>
     <body>
+        <referenceBlock name="page.main.title" remove="true"/>
+        
         <referenceBlock name="catalog.compare.sidebar" remove="true"/>
         
         <referenceContainer name="content">
